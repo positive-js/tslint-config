@@ -1,0 +1,2 @@
+# tslint-config
+TypeScript rules
