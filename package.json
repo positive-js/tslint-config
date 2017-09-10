@@ -1,0 +1,76 @@
+{
+    "name": "@ptsecurity/tslint-config",
+    "version": "0.1.0",
+    "author": "Positive Technologies",
+    "description": "Positive Technologies TSLint rules.",
+    "main": "main.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/positive-js/tslint-config.git"
+    },
+    "keywords": [
+        "tslint",
+        "custom-rules",
+        "rules",
+        "lint",
+        "linting",
+        "linter",
+        "tslint-plugin"
+    ],
+    "license": "MIT",
+    "engines": {
+        "node": ">= 6.0.0"
+    },
+    "config": {
+        "validate-commit-msg": {
+            "types": [
+                "feat",
+                "fix",
+                "docs",
+                "style",
+                "refactor",
+                "perf",
+                "test",
+                "chore",
+                "ci"
+            ],
+            "scope": {
+                "required": true,
+                "allowed": [
+                    "cli",
+                    "tslint-config",
+                    "tools"
+                ],
+                "validate": true,
+                "multiple": false
+            },
+            "warnOnFail": false,
+            "maxSubjectLength": 100
+        }
+    },
+    "scripts": {
+        "commitmsg": "validate-commit-msg",
+        "test:rules": "tslint -r ./dist/@ptsecurity/tslint-config/rules --test ./test/rules/*/*"
+    },
+    "dependencies": {
+        "tslint": "5.7.0",
+        "tslib": "1.7.1",
+        "tsutils": "2.8.2",
+        "codelyzer": "3.1.2",
+        "tslint-eslint-rules": "4.1.1",
+        "tslint-microsoft-contrib": "5.0.1"
+    },
+    "devDependencies": {
+        "@types/node": "8.0.28",
+        "conventional-changelog": "1.1.5",
+        "validate-commit-msg": "2.14.0",
+        "husky": "0.14.3",
+        "npm-run-all": "4.1.1",
+        "rimraf": "2.6.1",
+        "ts-node": "3.3.0",
+        "typescript": "2.5.2"
+    },
+    "peerDependencies": {
+        "tslint": "^5.0.0"
+    }
+}

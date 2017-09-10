@@ -1,0 +1,51 @@
+import {A, B} from 'foo';   	// Here we have some spaces and it should pass
+import {C, D} from 'bar';
+const theAnswer = 42;
+
+import {E, F} from 'foo'; const theAnswer = 114;
+~~~~~~~~~~~~~~~~~~~~~~~~~ [missing-blank-line]
+import {G, H} from 'bar';   	const theAnswer = 114;
+~~~~~~~~~~~~~~~~~~~~~~~~~ [missing-blank-line]
+import {I, J} from 'foo';
+~~~~~~~~~~~~~~~~~~~~~~~~~ [too-many-blanks]
+
+
+// Line with the comment
+
+/*
+    Here comes some multiline comment
+    and we just can't allow the excess of blank lines
+    between comments so it should fail
+*/
+
+const theAnswer = 310;
+
+import {K, L} from 'foo';
+// Line with the comment and one blank line next to it
+
+const theAnswer = 843;
+
+import {M, N} from 'foo';
+// Line with the comment
+/*
+    Here comes some multiline comment
+    but we are ignoring blank lines inside a comment
+
+
+    so it should pass
+
+    at least I hope so
+*/
+
+// Here is a blatant example of the rule violation but
+// instead of simply typing new line characters we
+// added pinch of other white space like characters as well
+import {P, O} from 'foo';
+import {R, S} from 'bar';
+~~~~~~~~~~~~~~~~~~~~~~~~~ [too-many-blanks]
+
+
+const theAnswer = 6211;
+
+[too-many-blanks]: Too many blank lines after import
+[missing-blank-line]: Missing blank line after import

@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "outDir": "./dist/@ptsecurity/tslint-config",
+        "removeComments": true,
+        "inlineSourceMap": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strictNullChecks": true,
+        "stripInternal": true,
+        "lib": ["es6"],
+        "skipLibCheck": true,
+        "importHelpers": true
+    }
+}
