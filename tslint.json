@@ -1,5 +1,5 @@
 {
     "rulesDirectory": [
-        "./src/rules"
+        "./dist/@ptsecurity/tslint-config/main"
     ]
 }
