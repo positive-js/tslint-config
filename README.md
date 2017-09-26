@@ -1,6 +1,6 @@
 # @ptsecurity/tslint-config
 
-[![Version][version-badge]][npm]
+[![NPM version](https://img.shields.io/npm/v/tslint-config.svg?style=flat)](https://www.npmjs.com/package/@ptsecurity/tslint-config)
 
 ## Install
 
@@ -25,7 +25,6 @@ the `"extends"` field. Custom rules can then be enabled under `"rules"`.
 }
 ```
 
-[version-badge]: https://img.shields.io/npm/v/@ptsecurity/tslint-config.svg?style=flat-square
 [npm]: https://www.npmjs.com/package/@ptsecurity/tslint-config
 [typescript]: https://www.typescriptlang.org/
 [tslint]: https://palantir.github.io/tslint/
