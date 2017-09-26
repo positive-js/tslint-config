@@ -2,6 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/positive-js/tslint-config/tree/master.svg?style=shield)](https://circleci.com/gh/positive-js/tslint-config/tree/master)
 [![npm](https://img.shields.io/npm/v/@ptsecurity/tslint-config.svg)](https://www.npmjs.com/package/@ptsecurity/tslint-config)
+[![David-DM](https://david-dm.org/positive-js/tslint-config/status.svg)](https://david-dm.org/positive-js/tslint-config)
 
 ## Install
 
