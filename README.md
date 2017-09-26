@@ -1,7 +1,7 @@
 # @ptsecurity/tslint-config
 
 [![CircleCI](https://circleci.com/gh/positive-js/tslint-config/tree/master.svg?style=shield)](https://circleci.com/gh/positive-js/tslint-config/tree/master)
-[![NPM version](https://img.shields.io/npm/v/tslint-config.svg?style=flat)](https://www.npmjs.com/package/@ptsecurity/tslint-config)
+[![npm](https://img.shields.io/npm/v/@ptsecurity/tslint-config.svg)](https://www.npmjs.com/package/@ptsecurity/tslint-config)
 
 ## Install
 
