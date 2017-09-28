@@ -39,6 +39,7 @@ export default {
                 multiline: "never",
                 singleline: "never"
             }
-        ]
+        ],
+        "quotemark": [true, "single"]
     }
 };
