@@ -1,5 +1,6 @@
 import angular from './configs/angular';
-
+import tslintOverride from './configs/tslint-override';
+    
 module.exports = {
     extends: [
         'codelyzer',
@@ -9,6 +10,7 @@ module.exports = {
         './rules'
     ],
     rules: {
-        ...angular.rules
+        ...angular.rules,
+        ...tslintOverride.rules
     }
 };
