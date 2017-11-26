@@ -1,10 +1,12 @@
-
 export default {
     rules: {
+        // TypeScript-specific
+        "member-access": [true, "no-public"],
+
         // Style
         "array-type": [
             true,
-            "array"
+            "generic"
         ],
         "arrow-parens": [
             true,
@@ -14,6 +16,7 @@ export default {
         "prefer-method-signature": true,
         "no-unnecessary-callback-wrapper": true,
         "prefer-template": true,
+        "variable-name": [true, "check-format", "allow-leading-underscore", "allow-pascal-case"],
 
         // Functionality
         "await-promise": [
@@ -26,6 +29,14 @@ export default {
         "no-unbound-method": {
             options: ["ignore-static"]
         },
+        "ordered-imports": [
+            true,
+            {
+                "import-sources-order": "lowercase-first",
+                "grouped-imports": true,
+                "named-imports-order": "any"
+            }
+        ],
         "radix": false,
         "no-duplicate-switch-case": true,
         "no-for-in-array": true,
@@ -40,6 +51,7 @@ export default {
         "max-classes-per-file": [
             false
         ],
+        "no-require-imports": false,
         "object-literal-sort-keys": false,
         "trailing-comma": [
             true,
@@ -54,6 +66,6 @@ export default {
         "no-parameter-reassignment": true,
         "deprecation": true,
         "indent": [true, "spaces", 4],
-        "no-duplicate-imports": true,
+        "no-duplicate-imports": true
     }
 };
