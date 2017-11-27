@@ -1,7 +1,6 @@
 import angular from './configs/angular';
 import tslintMSContrib from './configs/tslint-microsoft-contrib-override';
 import tslintOverride from './configs/tslint-override';
-    
 module.exports = {
     extends: [
         'codelyzer',
@@ -12,7 +11,7 @@ module.exports = {
     ],
     rules: {
         ...angular.rules,
-        ...tslintMSContrib.rules,    
+        ...tslintMSContrib.rules,
         ...tslintOverride.rules
     }
 };

@@ -11,6 +11,9 @@ export default {
             "ban-single-arg-parens"
         ],
         "no-angle-bracket-type-assertion": false,
+        "prefer-method-signature": true,
+        "no-unnecessary-callback-wrapper": true,
+        "prefer-template": true,
 
         // Functionality
         "await-promise": [
@@ -24,6 +27,11 @@ export default {
             options: ["ignore-static"]
         },
         "radix": false,
+        "no-duplicate-switch-case": true,
+        "no-for-in-array": true,
+        "no-implicit-dependencies": [true, "dev"],
+        "prefer-object-spread": true,
+
         // Maintainability
         "cyclomatic-complexity": true,
         "linebreak-style": [
@@ -40,6 +48,12 @@ export default {
                 singleline: "never"
             }
         ],
-        "quotemark": [true, "single"]
+        "quotemark": [true, "single"],
+        "no-import-side-effect": [true, {"ignore-module": "(\\.html|\\.css\\.less\\.scss\\.styl)$"}],
+        "no-magic-numbers": true,
+        "no-parameter-reassignment": true,
+        "deprecation": true,
+        "indent": [true, "spaces", 4],
+        "no-duplicate-imports": true,
     }
 };
