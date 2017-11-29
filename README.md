@@ -27,6 +27,9 @@ the `"extends"` field. Custom rules can then be enabled under `"rules"`.
 }
 ```
 
+## Contributing
+Please read [community-guidelines here](https://github.com/positive-js/community-guidelines).
+
 [npm]: https://www.npmjs.com/package/@ptsecurity/tslint-config
 [typescript]: https://www.typescriptlang.org/
 [tslint]: https://palantir.github.io/tslint/
