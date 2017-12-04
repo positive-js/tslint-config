@@ -3,6 +3,9 @@ anchor_1: &job_defaults
   docker:
     - image: ptsecurity/node-container:0.0.1
 
+anchor_2: &post_checkout
+  post: git pull --ff-only origin "refs/pull/${CI_PULL_REQUEST//*pull\//}/merge"
+
 version: 2
 jobs:
   build:
@@ -29,8 +32,8 @@ jobs:
           command: npm run build:tslint
       - run:
           name: Test
-          command: npm run test:rules    
-          
+          command: npm run test:rules
+
 workflows:
   version: 2
   default_workflow:
