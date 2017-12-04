@@ -6,7 +6,7 @@ export default {
         // Style
         "array-type": [
             true,
-            "generic"
+            "array"
         ],
         "arrow-parens": [
             true,
