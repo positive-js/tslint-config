@@ -8,10 +8,7 @@ export default {
             true,
             "array"
         ],
-        "arrow-parens": [
-            true,
-            "ban-single-arg-parens"
-        ],
+        "arrow-parens": true,
         "no-angle-bracket-type-assertion": false,
         "prefer-method-signature": true,
         "no-unnecessary-callback-wrapper": true,
