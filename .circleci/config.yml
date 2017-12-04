@@ -11,7 +11,8 @@ jobs:
   build:
     <<: *job_defaults
     steps:
-      - checkout
+      - checkout:
+          <<: *post_checkout
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
