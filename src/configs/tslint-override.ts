@@ -58,7 +58,7 @@ export default {
             }
         ],
         "quotemark": [true, "single"],
-        "no-import-side-effect": [true, {"ignore-module": "(\\.html|\\.css\\.less\\.scss\\.styl)$"}],
+        "no-import-side-effect": [true, {"ignore-module": "(\\.html|\\.css|\\.less|\\.scss|\\.styl)$"}],
         "no-magic-numbers": true,
         "no-parameter-reassignment": true,
         "deprecation": true,
