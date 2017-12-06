@@ -20,7 +20,7 @@ export default {
             true,
             "PromiseLike"
         ],
-        "import-blacklist": [true, "lodash", "rxjs"],
+        "import-blacklist": [true, "rxjs"],
         "label-position": true,
         "no-switch-case-fall-through": true,
         "no-unbound-method": {
