@@ -38,7 +38,7 @@ export default {
             }
         ],
         "radix": false,
-        "no-console": [true, "log", "debug"],
+        "no-console": [true, "log", "debug", "error"],
         "no-duplicate-switch-case": true,
         "no-for-in-array": true,
         "no-implicit-dependencies": [true, "dev"],
