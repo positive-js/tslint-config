@@ -1,0 +1,7 @@
+{
+    "rules": {
+        "blank-lines": [true, {
+            "above-method": 2
+        }]
+    }
+}

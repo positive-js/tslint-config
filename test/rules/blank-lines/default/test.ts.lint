@@ -1,0 +1,61 @@
+import {A, B} from 'foo';
+
+import {C, D} from 'bar';
+~~~~~~~~~~~~~~~~~~~~~~~~~ [wrong-blank-lines-count-after-imports]
+const theAnswer = 42;
+
+
+
+import {A, B} from 'foo';
+
+import {C, D} from 'bar';
+
+const theAnswer = 42;
+
+
+
+import {A, B} from 'foo';
+
+import {C, D} from 'bar';
+~~~~~~~~~~~~~~~~~~~~~~~~~ [wrong-blank-lines-count-after-imports]
+
+
+const theAnswer = 42;
+let test;
+
+if (theAnswer === 42) {
+    test = true;
+}
+
+
+const theAnswer = 42;
+let test;
+if (theAnswer === 42) {
+~ [wrong-blank-lines-count-above-conditional]
+    test = true;
+}
+
+class TestClass {
+    constructor() {
+        console.log('123');
+    }
+
+    testMethod() {
+        // do smth
+    }
+    testMethod2() {
+    ~ [wrong-blank-lines-count-above-method]
+        // do smth2
+    }
+
+
+    testMethod3() {
+    ~ [wrong-blank-lines-count-above-method]
+        // do smth3
+    }
+}
+
+[wrong-blank-lines-count]: You need to use 1 consecutive blank lines %s
+[wrong-blank-lines-count-after-imports]: wrong-blank-lines-count % ('after imports')
+[wrong-blank-lines-count-above-conditional]: wrong-blank-lines-count % ('above conditional')
+[wrong-blank-lines-count-above-method]: wrong-blank-lines-count % ('above method')
