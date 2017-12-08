@@ -40,6 +40,14 @@ export default {
         "no-duplicate-switch-case": true,
         "no-for-in-array": true,
         "no-implicit-dependencies": [true, "dev"],
+        "no-this-assignment": [
+            true,
+            {
+                "allowed-names": [
+                    "^self$"
+                ]
+            }
+        ],
         "prefer-object-spread": true,
 
         // Maintainability
