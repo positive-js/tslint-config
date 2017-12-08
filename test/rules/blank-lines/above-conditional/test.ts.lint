@@ -1,0 +1,25 @@
+const theAnswer = 42;
+let test;
+
+if (theAnswer === 42) {
+~ [wrong-blank-lines-count-above-conditional]
+    test = true;
+}
+
+
+const array = [1, 2, 3];
+let test;
+for (const item in array) {
+~ [wrong-blank-lines-count-above-conditional]
+    test = true;
+}
+
+
+let test;
+
+
+while (true) {
+    test = true;
+}
+
+[wrong-blank-lines-count-above-conditional]: You need to use 2 consecutive blank lines above conditional

@@ -35,6 +35,7 @@ export default {
             }
         ],
         "radix": false,
+        "no-consecutive-blank-lines": false,
         "no-console": [true, "log", "debug", "error"],
         "no-duplicate-switch-case": true,
         "no-for-in-array": true,

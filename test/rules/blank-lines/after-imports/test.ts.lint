@@ -1,0 +1,36 @@
+import {A, B} from 'foo';
+
+import {C, D} from 'bar';
+~~~~~~~~~~~~~~~~~~~~~~~~~ [wrong-blank-lines-count-after-imports]
+const theAnswer = 42;
+
+
+
+import {A, B} from 'foo';
+
+import {C, D} from 'bar';
+~~~~~~~~~~~~~~~~~~~~~~~~~ [wrong-blank-lines-count-after-imports]
+
+const theAnswer = 42;
+
+
+import {A, B} from 'foo';
+
+import {C, D} from 'bar';
+~~~~~~~~~~~~~~~~~~~~~~~~~ [wrong-blank-lines-count-after-imports]
+
+
+
+const theAnswer = 42;
+
+
+
+import {A, B} from 'foo';
+
+import {C, D} from 'bar';
+
+
+const theAnswer = 42;
+
+
+[wrong-blank-lines-count-after-imports]: You need to use 2 consecutive blank lines after imports
