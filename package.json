@@ -1,6 +1,6 @@
 {
     "name": "@ptsecurity/tslint-config",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "author": "Positive Technologies",
     "description": "Positive Technologies TSLint rules.",
     "main": "main.js",
@@ -19,7 +19,7 @@
     ],
     "license": "MIT",
     "engines": {
-        "node": ">= 6.0.0"
+        "node": ">= 8.0.0"
     },
     "config": {
         "validate-commit-msg": {
