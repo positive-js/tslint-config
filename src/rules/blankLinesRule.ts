@@ -9,6 +9,11 @@ const ABOVE_METHOD = 'above-method';
 
 const DEFAULT_COUNT_OF_BLANK_LINES = 1;
 
+const enum CharacterCodes {
+    lineFeed = 10,              // \n
+    carriageReturn = 13         // \r
+}
+
 interface Options {
     afterImports: number;
     aboveConditional: number;
@@ -166,11 +171,15 @@ class BlankLinesWalker extends Lint.AbstractWalker<Options> {
         return nodeText
             .split('')
             .reduce<number>(
-                (memo, char) => {
+                (memo, char, index, text) => {
                     const code = char.charCodeAt(0) || 0;
 
                     if (isLineBreakAtStart && ts.isLineBreak(code)) {
-                        return memo + 1;
+                        const prevChar = index > 0 ? text[index - 1] : '';
+                        const isCRLF = prevChar.charCodeAt(0) === CharacterCodes.carriageReturn &&
+                            code === CharacterCodes.lineFeed;
+
+                        return !isCRLF ? memo + 1 : memo;
                     } else if (!ts.isWhiteSpaceLike(code)) {
                         isLineBreakAtStart = false;
                     }
