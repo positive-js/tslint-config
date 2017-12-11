@@ -112,7 +112,7 @@ class BlankLinesWalker extends Lint.AbstractWalker<Options> {
             case ts.SyntaxKind.ForOfStatement:
                 return this.visitConditionalExpression(node as ts.Statement);
             case ts.SyntaxKind.MethodDeclaration:
-                return this.visitMethodDeclaration(node as ts.Statement);
+                return this.visitMethodDeclaration(node as ts.MethodDeclaration);
             default:
                 return ts.forEachChild(node, (child) => this.visitNode(child));
         }
@@ -134,7 +134,19 @@ class BlankLinesWalker extends Lint.AbstractWalker<Options> {
         }
     }
 
-    private visitMethodDeclaration(node: ts.Statement): void {
+    private visitMethodDeclaration(node: ts.MethodDeclaration): void {
+        const parent = node.parent;
+
+        if (!parent || parent.kind !== ts.SyntaxKind.ClassDeclaration) {
+            return;
+        }
+
+        const firstClassMember = (node.parent as ts.ClassDeclaration).members[0];
+
+        if (firstClassMember === node) {
+            return;
+        }
+
         const blankLinesAboveMethod: number = this.getBlankLines(node);
 
         if (blankLinesAboveMethod !== this.options.aboveMethod) {
