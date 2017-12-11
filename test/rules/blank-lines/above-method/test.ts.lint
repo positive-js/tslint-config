@@ -19,4 +19,30 @@ class TestClass {
 }
 
 
+class TestClass {
+    testMethod() {
+        // do smth
+    }
+    private testMethod2() {
+    ~ [wrong-blank-lines-count-above-method]
+        // do smth2
+    }
+
+
+    protected testMethod3() {
+        // do smth3
+    }
+}
+
+
+return {
+    equals(currentState, previousState) {
+        return _.isEqual(currentState, previousState);
+    },
+    test() {
+        return 123;
+    }
+});
+
+
 [wrong-blank-lines-count-above-method]: You need to use 2 consecutive blank lines above method
