@@ -10,6 +10,7 @@ export default {
         ],
         "arrow-parens": true,
         "no-angle-bracket-type-assertion": false,
+        "object-literal-key-quotes": [true, "as-needed"],
         "prefer-method-signature": true,
         "no-unnecessary-callback-wrapper": true,
         "prefer-template": true,
