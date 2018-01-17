@@ -1,7 +1,7 @@
 anchor_1: &job_defaults
   working_directory: ~/tslint-config
   docker:
-    - image: ptsecurity/node-container:0.0.1
+    - image: ptsecurity/node-container:0.0.4
 
 anchor_2: &post_checkout
   post: git pull --ff-only origin "refs/pull/${CI_PULL_REQUEST//*pull\//}/merge"
@@ -10,10 +10,12 @@ version: 2
 jobs:
   build:
     <<: *job_defaults
+    resource_class: large
     steps:
-      - checkout
+      - checkout:
+          <<: *post_checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: tslint-cache-{{ checksum "package.json" }}
       - run:
           name: System information
           command: |
@@ -22,11 +24,11 @@ jobs:
             echo "Yarn v$(yarn --version)"
       - run:
           name: Install npm packages
-          command: npm -v && npm install
+          command: npm install
       - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: tslint-cache-{{ checksum "package.json" }}
           paths:
-            - ./node_modules
+            - "node_modules"
       - run:
           name: Run build
           command: npm run build:tslint
