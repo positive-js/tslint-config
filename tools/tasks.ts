@@ -37,3 +37,12 @@ export async function copyMetaFiles() {
 export async function testRules() {
     await util.exec('tslint', [`-r ${packageDist}/rules --test ${root}/test/rules/**/*`]);
 }
+
+export async function createChangelog() {
+    await util.exec('conventional-changelog', [
+        `-p angular`,
+        '-i CHANGELOG.md',
+        '-s',
+        ' --config ./changelog/config.js'
+    ]);
+}
