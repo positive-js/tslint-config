@@ -1,9 +1,9 @@
-anchor_1: &job_defaults
+anchor_job_defaults: &job_defaults
   working_directory: ~/tslint-config
   docker:
     - image: ptsecurity/node-container:0.0.4
 
-anchor_2: &post_checkout
+anchor_post_checkout: &post_checkout
   post: git pull --ff-only origin "refs/pull/${CI_PULL_REQUEST//*pull\//}/merge"
 
 version: 2
@@ -35,9 +35,21 @@ jobs:
       - run:
           name: Test
           command: npm run test:rules
+  publish:
+    <<: *job_defaults
+    steps:
+      - checkout
+      - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+      - run: npm publish --access public
 
 workflows:
   version: 2
   default_workflow:
     jobs:
       - build
+      - publish:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^\d+(?:\.\d+)*$/
