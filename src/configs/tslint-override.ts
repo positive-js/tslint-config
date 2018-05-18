@@ -15,6 +15,19 @@ export default {
         "no-unnecessary-callback-wrapper": true,
         "prefer-template": true,
         "variable-name": [true, "check-format", "allow-leading-underscore", "allow-pascal-case"],
+        "whitespace": [
+                true,
+                "check-branch",
+                "check-decl",
+                "check-operator",
+                "check-module",
+                "check-separator",
+                "check-rest-spread",
+                "check-type",
+                "check-typecast",
+                "check-type-operator",
+                "check-preblock"
+        ],
 
         // Functionality
         "await-promise": [
