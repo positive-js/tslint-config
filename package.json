@@ -21,32 +21,6 @@
     "engines": {
         "node": ">= 8.0.0"
     },
-    "config": {
-        "validate-commit-msg": {
-            "types": [
-                "feat",
-                "fix",
-                "docs",
-                "style",
-                "refactor",
-                "perf",
-                "test",
-                "chore",
-                "ci"
-            ],
-            "scope": {
-                "required": true,
-                "allowed": [
-                    "tslint-config",
-                    "tools"
-                ],
-                "validate": true,
-                "multiple": false
-            },
-            "warnOnFail": false,
-            "maxSubjectLength": 100
-        }
-    },
     "scripts": {
         "commitmsg": "commitlint -x=./commitlint.config.js -e $GIT_PARAMS",
         "test:rules": "tslint -r ./dist/@ptsecurity/tslint-config/rules --test ./test/rules/*/*",
