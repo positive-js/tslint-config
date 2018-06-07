@@ -11,6 +11,7 @@ export default {
         "no-suspicious-comment": false,
         "prefer-type-cast": false,
         "no-var-self": false, // Deprecated. Use 'no-this-assignment' instead
-        "no-backbone-get-set-outside-model": false
+        "no-backbone-get-set-outside-model": false,
+        "no-stateless-class": false
     }
 };
