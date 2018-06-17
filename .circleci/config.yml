@@ -38,8 +38,6 @@ jobs:
   publish:
     <<: *job_defaults
     steps:
-      - checkout
-      - run: npm run build:tslint
       - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
       - run: npm publish ./dist/@ptecurity/tslint-config --access public
 
