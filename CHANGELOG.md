@@ -1,3 +1,13 @@
+<a name="0.6.3"></a>
+## [0.6.3](https://github.com/positive-js/tslint-config/compare/0.6.2...0.6.3) (2018-06-17)
+
+
+### Bug Fixes
+
+* update circleci config ([fc17766](https://github.com/positive-js/tslint-config/commit/fc17766))
+
+
+
 <a name="0.6.2"></a>
 ## [0.6.2](https://github.com/positive-js/tslint-config/compare/0.6.1...0.6.2) (2018-06-17)
 
