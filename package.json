@@ -1,6 +1,6 @@
 {
     "name": "@ptsecurity/tslint-config",
-    "version": "0.6.5",
+    "version": "0.6.6",
     "author": "Positive Technologies",
     "description": "Positive Technologies TSLint rules.",
     "main": "main.js",
