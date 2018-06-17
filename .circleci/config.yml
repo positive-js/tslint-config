@@ -36,7 +36,7 @@ jobs:
           name: Test
           command: npm run test:rules
       - persist_to_workspace:
-          root: ./dist/\@ptsecurity/tslint-config
+          root: ./dist/@ptsecurity/tslint-config
           paths: .
   publish:
     <<: *job_defaults
