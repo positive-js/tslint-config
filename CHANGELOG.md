@@ -1,3 +1,13 @@
+<a name="0.6.5"></a>
+## [0.6.5](https://github.com/positive-js/tslint-config/compare/0.6.4...0.6.5) (2018-06-17)
+
+
+### Bug Fixes
+
+* fixed config circle ([318cf14](https://github.com/positive-js/tslint-config/commit/318cf14))
+
+
+
 <a name="0.6.4"></a>
 ## [0.6.4](https://github.com/positive-js/tslint-config/compare/0.6.3...0.6.4) (2018-06-17)
 
