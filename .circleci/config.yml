@@ -40,7 +40,7 @@ jobs:
     steps:
       - checkout
       - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-      - run: npm publish --access public
+      - run: npm publish ./dist/@ptecurity/tslint-config --access public
 
 workflows:
   version: 2
