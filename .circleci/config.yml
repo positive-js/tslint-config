@@ -36,13 +36,13 @@ jobs:
           name: Test
           command: npm run test:rules
       - persist_to_workspace:
-          root: ./dist/@ptsecurity/tslint-config
-          paths: ./dist
+          root: ./dist/\@ptsecurity/tslint-config
+          paths: .
   publish:
     <<: *job_defaults
     steps:
       - attach_workspace:
-          at: .
+          at: ./dist
       - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
       - run: npm publish ./dist --access public
 
