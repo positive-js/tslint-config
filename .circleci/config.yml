@@ -52,6 +52,6 @@ workflows:
             - build
           filters:
             branches:
-              ignore: /.*/
+              only: master
             tags:
               only: /^\d+(?:\.\d+)*$/
