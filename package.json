@@ -28,7 +28,6 @@
         "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 --config ./tools/changelog/config.js"
     },
     "dependencies": {
-        "codelyzer": "4.0.1",
         "tslib": "1.8.1",
         "tslint": "5.8.0",
         "tslint-eslint-rules": "4.1.1",
