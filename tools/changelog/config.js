@@ -5,7 +5,7 @@ module.exports = {
         releaseCount: 1
     },
     writerOpts: {
-        transform: (commit, context) => {
+        transform: function (commit, context) {
 
             var issues = [];
 
@@ -45,19 +45,6 @@ module.exports = {
 
             if (typeof commit.subject === 'string') {
                 commit.subject = commit.subject.substring(0, 120);
-
-                let url = context.repository ?
-                    `${context.host}/${context.owner}/${context.repository}` :
-                    context.repoUrl;
-
-                if (url) {
-                    url = `${url}/issues/`;
-                    // Issue URLs.
-                    commit.subject = commit.subject.replace(/#([0-9]+)/g, (_, issue) => {
-                        issues.push(issue);
-                        return `[#${issue}](${url}${issue})`;
-                    });
-                }
 
                 if (context.host) {
                     // User URLs.
