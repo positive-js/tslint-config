@@ -1,3 +1,14 @@
+<a name="0.7.0"></a>
+# [0.7.0](https://github.com/positive-js/tslint-config/compare/0.6.8...0.7.0) (2018-07-28)
+
+
+### Features
+
+* removed codelizer rules ([#38](https://github.com/positive-js/tslint-config/issues/38)) ([4f21a31](https://github.com/positive-js/tslint-config/commit/4f21a31))
+* **config:** updated npm dependencies ([ac23e3e](https://github.com/positive-js/tslint-config/commit/ac23e3e))
+
+
+
 <a name="0.6.8"></a>
 ## [0.6.8](https://github.com/positive-js/tslint-config/compare/0.6.7...0.6.8) (2018-06-17)
 
@@ -62,29 +73,14 @@
 ## [0.6.2](https://github.com/positive-js/tslint-config/compare/0.6.1...0.6.2) (2018-06-17)
 
 
-### Chores
-
-* updated circleci config ([fd824d1](https://github.com/positive-js/tslint-config/commit/fd824d1))
-
-
 
 <a name="0.6.1"></a>
 ## [0.6.1](https://github.com/positive-js/tslint-config/compare/0.6.0...0.6.1) (2018-06-17)
 
 
-### Chores
-
-* fixed circleci confg ([38dabb7](https://github.com/positive-js/tslint-config/commit/38dabb7))
-
-
 
 <a name="0.6.0"></a>
 # [0.6.0](https://github.com/positive-js/tslint-config/compare/0.5.0...0.6.0) (2018-06-08)
-
-
-### Chores
-
-* **tslint-config:** publication to npm ([#29](https://github.com/positive-js/tslint-config/issues/29)) ([d0aa2c5](https://github.com/positive-js/tslint-config/commit/d0aa2c5))
 
 
 ### Features
@@ -136,11 +132,6 @@
 # [0.3.0](https://github.com/positive-js/tslint-config/compare/0.2.0...0.3.0) (2017-12-01)
 
 
-### Chores
-
-* **tslint-config:** updated npm dev dependencies ([2b0e473](https://github.com/positive-js/tslint-config/commit/2b0e473))
-
-
 ### Features
 
 * **tslint-config:** Improving rules for tslint:recommend ([#4](https://github.com/positive-js/tslint-config/issues/4)) ([f1c63f0](https://github.com/positive-js/tslint-config/commit/f1c63f0))
@@ -153,26 +144,14 @@
 # [0.2.0](https://github.com/positive-js/tslint-config/compare/0.1.3...0.2.0) (2017-11-09)
 
 
-### Chores
-
-* **tslint-config:** updated codelyzer version ([9b6b48d](https://github.com/positive-js/tslint-config/commit/9b6b48d))
-
-
 
 <a name="0.1.3"></a>
-## [0.1.3](https://github.com/positive-js/tslint-config/compare/97410d1...0.1.3) (2017-10-03)
+## [0.1.3](https://github.com/positive-js/tslint-config/compare/0.1.1...0.1.3) (2017-10-03)
 
 
-### Chores
 
-* **tools:** added build TS scripts ([d36ec17](https://github.com/positive-js/tslint-config/commit/d36ec17))
-* **tools:** remove scope cli ([46dbdd4](https://github.com/positive-js/tslint-config/commit/46dbdd4))
-* **tslint-config:** added first rules and contribs guides ([254db54](https://github.com/positive-js/tslint-config/commit/254db54))
-* **tslint-config:** added initial files ([97410d1](https://github.com/positive-js/tslint-config/commit/97410d1))
-* added "quotemark" rule ([caf948f](https://github.com/positive-js/tslint-config/commit/caf948f))
-* added override for TSLint rules ([e4961de](https://github.com/positive-js/tslint-config/commit/e4961de))
-* added override rules for TSLint Microsoft ([c90ad00](https://github.com/positive-js/tslint-config/commit/c90ad00))
-* **tslint-config:** bumped version number to 0.1.3 ([7f45f50](https://github.com/positive-js/tslint-config/commit/7f45f50))
+<a name="0.1.1"></a>
+## 0.1.1 (2017-09-26)
 
 
 
