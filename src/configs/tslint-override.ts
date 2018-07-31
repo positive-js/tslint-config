@@ -1,5 +1,8 @@
 export default {
     rules: {
+
+        "no-submodule-imports": false,
+
         // TypeScript-specific
         "member-access": [true, "no-public"],
 
