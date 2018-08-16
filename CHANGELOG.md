@@ -1,3 +1,18 @@
+<a name="0.7.2"></a>
+## [0.7.2](https://github.com/positive-js/tslint-config/compare/0.7.1...0.7.2) (2018-08-16)
+
+
+### Chores
+
+* fixed workflow ci ([5d98e95](https://github.com/positive-js/tslint-config/commit/5d98e95))
+
+
+### Features
+
+* defined rules with type check (#42) ([945b6b9](https://github.com/positive-js/tslint-config/commit/945b6b9)), closes [#42](https://github.com/positive-js/tslint-config/issues/42)
+
+
+
 <a name="0.7.1"></a>
 ## [0.7.1](https://github.com/positive-js/tslint-config/compare/0.7.0...0.7.1) (2018-07-31)
 
