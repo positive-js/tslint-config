@@ -3,7 +3,7 @@
 set -e
 
 echo "Matter token"
-echo ${MATTER_UI-BOT-HOOK}
+echo ${UI_BOT_TOKEN}
 
 curl \
 -i \
@@ -19,5 +19,5 @@ curl \
   | Web Client | 123         | :warning: 2 [(see details)](http://linktologs) |
   | iOS Client | 78          | :warning: 3 [(see details)](http://linktologs) |
   "
-}' https://chat.ptsecurity.com/hooks/${MATTER_UI-BOT-HOOK}
+}' https://chat.ptsecurity.com/hooks/${UI_BOT_TOKEN}
 
