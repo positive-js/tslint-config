@@ -1,3 +1,18 @@
+<a name="0.8.0"></a>
+## [0.8.0](https://github.com/positive-js/tslint-config/compare/0.7.2...0.8.0) (2018-08-23)
+
+
+### Chores
+
+* fix lock file ([381384c](https://github.com/positive-js/tslint-config/commit/381384c))
+
+
+### Features
+
+* **rules:** "no-use-before-declare": false ; no-unnecessary-class ([2f62bf6](https://github.com/positive-js/tslint-config/commit/2f62bf6))
+
+
+
 <a name="0.7.2"></a>
 ## [0.7.2](https://github.com/positive-js/tslint-config/compare/0.7.1...0.7.2) (2018-08-16)
 
