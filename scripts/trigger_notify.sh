@@ -16,5 +16,5 @@ curl \
   | Web Client | 123         | :warning: 2 [(see details)](http://linktologs) |
   | iOS Client | 78          | :warning: 3 [(see details)](http://linktologs) |
   "
-}' https://chat.ptsecurity.com/hooks/$MATTER_UI-BOT-HOOK
+}' https://chat.ptsecurity.com/hooks/${MATTER_UI-BOT-HOOK}
 
