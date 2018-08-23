@@ -38,6 +38,8 @@ jobs:
       - persist_to_workspace:
           root: ./dist/@ptsecurity/tslint-config
           paths: .
+      - run: ./scripts/trigger_notify.sh
+
   publish:
     <<: *job_defaults
     steps:
@@ -45,6 +47,7 @@ jobs:
           at: ./dist
       - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
       - run: npm publish ./dist --access public
+      - run: ./scripts/trigger_notify.sh
 
 workflows:
   version: 2
