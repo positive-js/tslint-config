@@ -2,6 +2,9 @@
 
 set -e
 
+echo "Matter token"
+echo ${MATTER_UI-BOT-HOOK}
+
 curl \
 -i \
 -X POST \
