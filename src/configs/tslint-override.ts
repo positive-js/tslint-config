@@ -20,17 +20,17 @@ export default {
         "prefer-template": true,
         "variable-name": [true, "check-format", "allow-leading-underscore", "allow-pascal-case"],
         "whitespace": [
-                true,
-                "check-branch",
-                "check-decl",
-                "check-operator",
-                "check-module",
-                "check-separator",
-                "check-rest-spread",
-                "check-type",
-                "check-typecast",
-                "check-type-operator",
-                "check-preblock"
+            true,
+            "check-branch",
+            "check-decl",
+            "check-operator",
+            "check-module",
+            "check-separator",
+            "check-rest-spread",
+            "check-type",
+            "check-typecast",
+            "check-type-operator",
+            "check-preblock"
         ],
         "no-unnecessary-type-assertion": true,
         "match-default-export-name": true,
@@ -82,7 +82,7 @@ export default {
         "no-unnecessary-class": ["allow-empty-class", "allow-constructor-only"],
         "restrict-plus-operands": true,
         "strict-boolean-expressions": false,
-        "strict-type-predicates": true,
+        "strict-type-predicates": false,
         "use-default-type-parameter": true,
         "no-unused-variable": false,
 
@@ -110,7 +110,7 @@ export default {
         "deprecation": true,
         "indent": [true, "spaces", 4],
         "no-duplicate-imports": true,
-        "prefer-readonly": true,
+        "prefer-readonly": false,
         "completed-docs": false
     }
 };
