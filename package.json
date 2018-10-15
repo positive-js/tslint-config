@@ -22,10 +22,12 @@
         "node": ">= 8.0.0"
     },
     "scripts": {
-        "commitmsg": "commitlint -x=./commitlint.config.js -e $GIT_PARAMS",
         "test:rules": "tslint -r ./dist/@ptsecurity/tslint-config/rules --test ./test/rules/*/*",
         "build:tslint": "ts-node ./tools/index.ts",
         "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 --config ./tools/changelog/config.js"
+    },
+    "hooks": {
+        "commit-msg": "[[ -n $HUSKY_BYPASS ]] || commitlint -x=./commitlint.config.js -E HUSKY_GIT_PARAMS"
     },
     "dependencies": {
         "tslib": "1.9.3",
