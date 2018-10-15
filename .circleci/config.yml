@@ -50,7 +50,10 @@ workflows:
   version: 2
   default_workflow:
     jobs:
-      - build
+      - build:
+          filters:
+            tags:
+              only: /.*/
       - publish:
           requires:
             - build
@@ -58,4 +61,4 @@ workflows:
             branches:
               ignore: /.*/
             tags:
-              only: /^\d+(?:\.\d+)*$/
+              only: /^\d+\.\d+\.\d+$/

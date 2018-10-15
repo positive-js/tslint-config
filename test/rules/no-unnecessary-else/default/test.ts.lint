@@ -1,21 +1,21 @@
-if (true) {
+if (condition) {
     return;
 } else {}
   ~~~~ [fail]
 
-if (true) return;
+if (condition) return;
 else ;
 ~~~~ [fail]
 
-if (true) {
+if (condition) {
     {
         return;
     }
 } else {}
   ~~~~ [fail]
 
-if (true) {
-    if (true) {
+if (condition) {
+    if (condition) {
         return;
     } else {
       ~~~~ [fail]
@@ -24,46 +24,46 @@ if (true) {
 } else {}
   ~~~~ [fail]
 
-if (true) {
-    if (true) {
+if (condition) {
+    if (condition) {
         return;
     }
 } else {}
 
-if (true) return;
+if (condition) return;
 
-if (true) foo();
+if (condition) foo();
 else bar();
 
-if (true) {
+if (condition) {
     return;
 }
 
-if (true) {
+if (condition) {
     foo();
 } else {
     bar();
 }
 
-if (true) {
+if (condition) {
     {
     }
 } else {}
 
-if (true) {
-    if (true) {
+if (condition) {
+    if (condition) {
         return;
     } else {
       ~~~~ [fail]
     }
 } else {}
 
-if (true) {
-    if (true) {
+if (condition) {
+    if (condition) {
     }
 } else {}
 
-if (true) {
+if (condition) {
     switch (foo) {
         case 'a':
             return;
@@ -75,7 +75,7 @@ if (true) {
 } else {}
   ~~~~ [fail]
 
-if (true) {
+if (condition) {
     switch (foo) {
         default:
             return;
@@ -85,7 +85,7 @@ if (true) {
 } else {}
   ~~~~ [fail]
 
-if (true) {
+if (condition) {
     switch (foo) {
         case 'a':
             return;
@@ -95,12 +95,12 @@ if (true) {
 } else {}
 
 for (;;) {
-    if (true) {
+    if (condition) {
         continue;
     } else {}
       ~~~~ [fail]
 
-    if (true) {
+    if (condition) {
         break;
     } else {}
       ~~~~ [fail]
@@ -118,7 +118,7 @@ for (;;) {
               ~~~~ [fail]
     }
 
-    if (true) {
+    if (condition) {
         switch (foo) {
             case 1:
                 continue;
@@ -131,7 +131,7 @@ for (;;) {
     } else {}
       ~~~~ [fail]
 
-    if (true) {
+    if (condition) {
         switch (foo) {
             case 1:
                 break;
@@ -142,27 +142,250 @@ for (;;) {
     } else {}
 }
 
-if (true) {
+if (condition) {
     throw 'foo';
 } else {}
   ~~~~ [fail]
 
-if (true)
+if (condition)
     throw 'foo';
 else;
 ~~~~ [fail]
 
-if (true) {
-}else if (true) {
+if (condition) {
+}else if (condition) {
     return;
 } else {}
 
-if (true) {
+if (condition) {
 }else{
-    if (true) {
+    if (condition) {
         return;
     } else {}
       ~~~~ [fail]
+}
+
+if (condition) {
+    try {
+    } catch {
+        return;
+    }
+} else {}
+
+if (condition) {
+    try {
+        return;
+    } catch {
+    }
+} else {}
+
+if (condition) {
+    try {
+    } catch {
+    } finally {
+        return;
+    }
+} else {}
+  ~~~~ [fail]
+
+if (condition) {
+    try {
+        return;
+    } catch {
+    } finally {
+    }
+} else {}
+
+if (condition) {
+    try {
+    } finally {
+        return;
+    }
+} else {}
+  ~~~~ [fail]
+
+if (condition) {
+    try {
+        return;
+    } finally {
+    }
+} else {}
+  ~~~~ [fail]
+
+if (condition) {
+    for (;;) {
+        try {
+            return;
+        } catch {
+            return;
+        } finally {
+            break;
+        }
+    }
+} else {}
+
+if (condition) {
+    for (;;) {
+        try {
+            return;
+        } finally {
+            break;
+        }
+    }
+} else {}
+
+if (condition) {
+    for (;;) {
+        try {
+            break;
+        } finally {
+            return;
+        }
+    }
+} else {}
+  ~~~~ [fail]
+
+if (condition) {
+    for (;;) {
+        try {
+            break;
+        } finally {
+            continue;
+        }
+    }
+} else {}
+
+if (condition) {
+    foo: for (;;) {
+        if (condition) {
+            continue;
+        } else {
+          ~~~~ [fail]
+            break;
+        }
+    }
+} else {}
+
+if (condition) {
+    foo: for (;;) {
+        if (condition)
+            while (true) {
+                if (condition) {
+                    continue foo;
+                } else {
+                  ~~~~ [fail]
+                    break foo;
+                }
+            }
+        else {}
+        ~~~~ [fail]
+    }
+} else {}
+
+if (condition) {
+    foo: for (;;) {
+        if (condition)
+            while (condition) {
+                if (condition)
+                    continue;
+                if (condition) {
+                    continue foo;
+                } else {
+                  ~~~~ [fail]
+                    break foo;
+                }
+            }
+        else {}
+    }
+} else {}
+
+foo: for (;;) {
+    if (condition)
+        switch (v) {
+            case 1:
+                if (condition) {
+                    break;
+                } else {}
+                  ~~~~ [fail]
+            default:
+                continue foo;
+        }
+    else {}
+}
+
+foo: for (;;)
+    if (condition)
+        for (;;)
+            try {
+                break foo;
+            } catch {
+                continue foo;
+            } finally {
+                break;
+            }
+    else {}
+
+if (condition) {
+    try {
+        throw 'foo';
+    } catch {}
+} else {}
+
+if (condition) {
+    try {
+        'statement';
+    } catch {
+        throw 'foo';
+    }
+} else {}
+
+if (condition) {
+    try {
+        return foo();
+    } catch {
+        throw 'foo';
+    }
+} else {}
+  ~~~~ [fail]
+
+if (condition) {
+    try {
+        return foo();
+    } finally {
+    }
+} else {}
+  ~~~~ [fail]
+
+if (condition) {
+    try {
+    } finally {
+        return;
+    }
+} else {}
+  ~~~~ [fail]
+
+foo: bar: for (;;) {
+    if (condition)
+        for (;;)
+            continue foo;
+    else {}
+    ~~~~ [fail]
+
+    if (condition)
+        for (;;)
+            break bar;
+    else {}
+    ~~~~ [fail]
+
+    if (condition)
+        baz: bas: for (;;)
+            break bas;
+    else {}
+
+    if (condition)
+        baz: bas: for (;;)
+            break baz;
+    else {}
 }
 
 [fail]: unnecessary else

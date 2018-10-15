@@ -1,8 +1,6 @@
 import * as cp from 'child_process';
-import * as fs from 'fs';
 import * as path from 'path';
 import * as fsExtra from 'fs-extra';
-import * as rimraf from 'rimraf';
 
 
 interface PackageDescription {
@@ -23,29 +21,6 @@ export function helperRoot(args: any) {
     args = Array.prototype.slice.call(arguments, 0);
 
     return path.join.apply(path, [root].concat(args));
-}
-
-export function writeFile(target: string, contents: string) {
-    return new Promise((resolve, reject) => {
-        fs.writeFile(target, contents, err => {
-            if (err) {
-                return reject(err);
-            }
-            resolve();
-        });
-    });
-}
-
-export function removeRecursively(glob: string) {
-    return new Promise((resolve, reject) => {
-        rimraf(glob, err => {
-            if (err) {
-                reject(err);
-            } else {
-                resolve();
-            }
-        });
-    });
 }
 
 export function fromNpm(command: string) {
@@ -105,10 +80,6 @@ export function createBuilder(tasks: TaskDef[]) {
     };
 }
 
-export function getAllPackages(config: Config) {
-    return flatMap(config.packages, ({ name }) => [name]);
-}
-
 export function flatMap<K, J>(list: K[], mapFn: (item: K) => J[]): J[] {
     return list.reduce(
         (newList, nextItem) => [...newList, ...mapFn(nextItem)],
@@ -126,7 +97,6 @@ export function mapAsync<T>(
 ) {
     return Promise.all(list.map(mapFn));
 }
-
 
 export function copy(target: string, destination: string) {
     fsExtra.copySync(target, destination);

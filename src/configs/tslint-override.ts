@@ -1,7 +1,11 @@
 export default {
     rules: {
+
+        "no-submodule-imports": false,
+
         // TypeScript-specific
         "member-access": [true, "no-public"],
+        "promise-function-async": false,
 
         // Style
         "array-type": [
@@ -28,13 +32,18 @@ export default {
                 "check-type-operator",
                 "check-preblock"
         ],
+        "no-unnecessary-type-assertion": true,
+        "match-default-export-name": true,
+        "no-boolean-literal-compare": true,
+        "no-unnecessary-qualifier": true,
+        "return-undefined": false,
 
         // Functionality
         "await-promise": [
             true,
             "PromiseLike"
         ],
-        "import-blacklist": [true, "lodash", "rxjs"],
+        "import-blacklist": [true, "lodash"],
         "label-position": true,
         "no-switch-case-fall-through": true,
         "no-unbound-method": {
@@ -63,6 +72,16 @@ export default {
             }
         ],
         "prefer-object-spread": true,
+        "no-unsafe-any": false,
+        "no-floating-promises": false,
+        "no-inferred-empty-object-type": true,
+        "no-use-before-declare": false,
+        "no-void-expression": [true, "ignore-arrow-function-shorthand"],
+        "no-unnecessary-class": ["allow-empty-class", "allow-constructor-only"],
+        "restrict-plus-operands": true,
+        "strict-boolean-expressions": false,
+        "strict-type-predicates": true,
+        "use-default-type-parameter": true,
 
         // Maintainability
         "cyclomatic-complexity": true,
@@ -87,6 +106,8 @@ export default {
         "no-parameter-reassignment": true,
         "deprecation": true,
         "indent": [true, "spaces", 4],
-        "no-duplicate-imports": true
+        "no-duplicate-imports": true,
+        "prefer-readonly": true,
+        "completed-docs": false
     }
 };

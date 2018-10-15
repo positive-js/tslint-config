@@ -7,7 +7,6 @@ const root = helperRoot('');
 const packageSrc = helperRoot('src');
 const packageDist = `${dist}/@ptsecurity/tslint-config`;
 
-console.log(packageSrc);
 
 export function removeDistFolder() {
     return util.exec('rimraf', [packageDist]);
@@ -36,13 +35,4 @@ export async function copyMetaFiles() {
 
 export async function testRules() {
     await util.exec('tslint', [`-r ${packageDist}/rules --test ${root}/test/rules/**/*`]);
-}
-
-export async function createChangelog() {
-    await util.exec('conventional-changelog', [
-        `-p angular`,
-        '-i CHANGELOG.md',
-        '-s',
-        ' --config ./changelog/config.js'
-    ]);
 }
