@@ -82,6 +82,7 @@ export default {
         "strict-boolean-expressions": false,
         "strict-type-predicates": true,
         "use-default-type-parameter": true,
+        "no-unused-variable": false,
 
         // Maintainability
         "cyclomatic-complexity": true,
