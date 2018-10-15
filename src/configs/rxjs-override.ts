@@ -1,4 +1,4 @@
-export const rxjsOvverideConfig = {
+export const rxjsOverrideConfig = {
     rules: {
         'rxjs-no-add': { severity: 'error' },
         'rxjs-no-patched': { severity: 'error' },
