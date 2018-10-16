@@ -1,0 +1,14 @@
+{
+    "rulesDirectory": [
+        "../../../../src/rules"
+    ],
+    "rules": {
+        "naming-convention": [
+            true,
+            {
+                "type": "parameter",
+                "leadingUnderscore": "require"
+            }
+        ]
+    }
+}
