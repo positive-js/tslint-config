@@ -1,4 +1,4 @@
-import customRules from './configs/custom-rules';
+import { customRules } from './configs/custom-rules';
 import { rxjsOverrideConfig } from './configs/rxjs-override';
 import tslintMicrosoftContribOverride from './configs/tslint-microsoft-contrib-override';
 import tslintOverride from './configs/tslint-override';

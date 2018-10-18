@@ -37,6 +37,8 @@ export default {
         "no-boolean-literal-compare": true,
         "no-unnecessary-qualifier": true,
         "return-undefined": false,
+        "class-name": false,
+        "interface-name": false,
 
         // Functionality
         "await-promise": [
