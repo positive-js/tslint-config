@@ -1,5 +1,6 @@
 export const customRules = {
     rules: {
+        'orthodox-getter-and-setter': true,
         'blank-lines': [
             true,
             {

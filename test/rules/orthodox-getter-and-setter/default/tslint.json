@@ -1,0 +1,5 @@
+{
+    "rules": {
+        "orthodox-getter-and-setter": true
+    }
+}
