@@ -16,7 +16,7 @@ curl \
   "channel": "test-bot",
   "username": "Wall-e",
   "text": "#### TSLint Config was published.\n
-  Build: ['"$CIRCLE_BUILD_NUM"']('"$CIRCLE_BUILD_URL"')
+  Build: [#'"$CIRCLE_BUILD_NUM"']('"$CIRCLE_BUILD_URL"')
   Package [tslint-config@'"$VERSION_CURRENT_PACKAGE"'](https://www.npmjs.com/package/@ptsecurity/tslint-config)\n
   [View changelog](https://github.com/positive-js/tslint-config/blob/master/CHANGELOG.md)"
 }' https://chat.ptsecurity.com/hooks/${UI_BOT_TOKEN}
