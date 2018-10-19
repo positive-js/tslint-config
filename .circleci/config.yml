@@ -45,6 +45,7 @@ jobs:
           at: ./dist
       - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
       - run: npm publish ./dist --access public
+      - run: cd $CIRCLE_WORKING_DIRECTORY
       - run: ./scripts/trigger_notify.sh
 
 workflows:
