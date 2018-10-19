@@ -13,7 +13,7 @@ curl \
 -X POST \
 -H 'Content-Type: application/x-www-form-urlencoded' \
 -d 'payload={
-  "channel": "test-bot",
+  "channel": "town-square",
   "username": "Wall-e",
   "text": "#### :white_check_mark: TSLint Config was published. :bell: :tada:\n
   Version | '"$VERSION_CURRENT_PACKAGE"'
