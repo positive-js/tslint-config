@@ -10,7 +10,6 @@ version: 2
 jobs:
   build:
     <<: *job_defaults
-    resource_class: large
     steps:
       - checkout:
           <<: *post_checkout
@@ -38,6 +37,7 @@ jobs:
       - persist_to_workspace:
           root: ./dist/@ptsecurity/tslint-config
           paths: .
+
   publish:
     <<: *job_defaults
     steps:
@@ -45,6 +45,7 @@ jobs:
           at: ./dist
       - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
       - run: npm publish ./dist --access public
+      - run: ./scripts/trigger_notify.sh
 
 workflows:
   version: 2
