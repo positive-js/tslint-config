@@ -37,7 +37,6 @@ jobs:
       - persist_to_workspace:
           root: ./dist/@ptsecurity/tslint-config
           paths: .
-      - run: ./scripts/trigger_notify.sh
 
   publish:
     <<: *job_defaults
