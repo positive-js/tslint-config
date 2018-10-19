@@ -19,7 +19,7 @@ curl \
   Version | 0.9.0
   --- | ---
   :gear: Build | [#'"$CIRCLE_BUILD_NUM"']('"$CIRCLE_BUILD_URL"')
-  :package: Package | [tslint-config@'"$VERSION_CURRENT_PACKAGE"'](https://www.npmjs.com/package/@ptsecurity/tslint-config)
+  :package: Package | [tslint-config](https://www.npmjs.com/package/@ptsecurity/tslint-config)
   :memo: Changelog | [view](https://github.com/positive-js/tslint-config/blob/'"$CIRCLE_TAG"'/CHANGELOG.md)"
 }' https://chat.ptsecurity.com/hooks/${UI_BOT_TOKEN}
 
