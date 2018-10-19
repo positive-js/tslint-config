@@ -16,7 +16,7 @@ curl \
   "channel": "test-bot",
   "username": "Wall-e",
   "text": "#### :white_check_mark: TSLint Config was published. :bell: :tada:\n
-  Version | "'$VERSION_CURRENT_PACKAGE'"
+  Version | '"$VERSION_CURRENT_PACKAGE"'
   --- | ---
   :gear: Build | [#'"$CIRCLE_BUILD_NUM"']('"$CIRCLE_BUILD_URL"')
   :package: Package | [tslint-config](https://www.npmjs.com/package/@ptsecurity/tslint-config)
