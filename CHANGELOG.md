@@ -1,5 +1,36 @@
+<a name="0.9.0"></a>
+# [0.9.0](https://github.com/positive-js/tslint-config/compare/0.8.0...0.9.0) (2018-10-19)
+
+
+### Bug Fixes
+
+* **rules:** remove 'rxjs' from "import-blacklist" (#45) ([96564e9](https://github.com/positive-js/tslint-config/commit/96564e9)), closes [#45](https://github.com/positive-js/tslint-config/issues/45)
+* changed notification channel ([f9d24e5](https://github.com/positive-js/tslint-config/commit/f9d24e5))
+* husky hooks ([cb1b223](https://github.com/positive-js/tslint-config/commit/cb1b223))
+
+
+### Chores
+
+* add license scan report and status (#40) ([da9b91e](https://github.com/positive-js/tslint-config/commit/da9b91e)), closes [#40](https://github.com/positive-js/tslint-config/issues/40)
+* added notify (#50) ([0a5ce71](https://github.com/positive-js/tslint-config/commit/0a5ce71)), closes [#50](https://github.com/positive-js/tslint-config/issues/50)
+
+
+### Documentation
+
+* pages for a used custom rules ([6453163](https://github.com/positive-js/tslint-config/commit/6453163))
+
+
+### Features
+
+* added rxjs rules (#47) ([438fbaf](https://github.com/positive-js/tslint-config/commit/438fbaf)), closes [#47](https://github.com/positive-js/tslint-config/issues/47)
+* updated dependencies (#46) ([79ce546](https://github.com/positive-js/tslint-config/commit/79ce546)), closes [#46](https://github.com/positive-js/tslint-config/issues/46)
+* **rules:** added rule naming-convention (#48) ([f890ea6](https://github.com/positive-js/tslint-config/commit/f890ea6)), closes [#48](https://github.com/positive-js/tslint-config/issues/48)
+* **rules:** added rule orthodox-getter-and-setter (#49) ([a92875f](https://github.com/positive-js/tslint-config/commit/a92875f)), closes [#49](https://github.com/positive-js/tslint-config/issues/49)
+
+
+
 <a name="0.8.0"></a>
-## [0.8.0](https://github.com/positive-js/tslint-config/compare/0.7.2...0.8.0) (2018-08-23)
+# [0.8.0](https://github.com/positive-js/tslint-config/compare/0.7.2...0.8.0) (2018-08-23)
 
 
 ### Chores
