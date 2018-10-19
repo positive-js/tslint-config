@@ -12,7 +12,7 @@ curl \
 -X POST \
 -H 'Content-Type: application/x-www-form-urlencoded' \
 -d 'payload={
-  "channel": "Earth",
+  "channel": "test-bot",
   "username": "Wall-e",
   "text": "#### TSLint Config was published.\n
   [(tslint-config@${VERSION_CURRENT_PACKAGE})](https://www.npmjs.com/package/@ptsecurity/tslint-config)\n
