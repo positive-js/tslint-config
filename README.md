@@ -3,6 +3,7 @@
 [![CircleCI](https://circleci.com/gh/positive-js/tslint-config/tree/master.svg?style=shield)](https://circleci.com/gh/positive-js/tslint-config/tree/master)
 [![npm](https://img.shields.io/npm/v/@ptsecurity/tslint-config.svg)](https://www.npmjs.com/package/@ptsecurity/tslint-config)
 [![David-DM](https://david-dm.org/positive-js/tslint-config/status.svg)](https://david-dm.org/positive-js/tslint-config)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpositive-js%2Ftslint-config.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpositive-js%2Ftslint-config?ref=badge_shield)
 
 ## Install
 
@@ -34,3 +35,7 @@ Please read [community-guidelines here](https://github.com/positive-js/community
 [typescript]: https://www.typescriptlang.org/
 [tslint]: https://palantir.github.io/tslint/
 [license]: LICENSE
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpositive-js%2Ftslint-config.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpositive-js%2Ftslint-config?ref=badge_large)

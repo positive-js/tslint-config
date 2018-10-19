@@ -37,13 +37,15 @@ export default {
         "no-boolean-literal-compare": true,
         "no-unnecessary-qualifier": true,
         "return-undefined": false,
+        "class-name": false,
+        "interface-name": false,
 
         // Functionality
         "await-promise": [
             true,
             "PromiseLike"
         ],
-        "import-blacklist": [true, "lodash", "rxjs"],
+        "import-blacklist": [true, "lodash"],
         "label-position": true,
         "no-switch-case-fall-through": true,
         "no-unbound-method": {
@@ -82,6 +84,7 @@ export default {
         "strict-boolean-expressions": false,
         "strict-type-predicates": true,
         "use-default-type-parameter": true,
+        "no-unused-variable": false,
 
         // Maintainability
         "cyclomatic-complexity": true,
