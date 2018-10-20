@@ -1,4 +1,4 @@
-export default {
+export const tslintOverride = {
     rules: {
 
         "no-submodule-imports": false,

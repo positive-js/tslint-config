@@ -1,5 +1,5 @@
 
-export default {
+export const tslintMicrosoftContribOverride = {
     rules: {
         // Maintainability
         "export-name": false,

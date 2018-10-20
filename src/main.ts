@@ -1,7 +1,7 @@
 import { customRules } from './configs/custom-rules';
 import { rxjsOverrideConfig } from './configs/rxjs-override';
-import tslintMicrosoftContribOverride from './configs/tslint-microsoft-contrib-override';
-import tslintOverride from './configs/tslint-override';
+import { tslintMicrosoftContribOverride } from './configs/tslint-microsoft-contrib-override';
+import { tslintOverride } from './configs/tslint-override';
 
 
 module.exports = {
