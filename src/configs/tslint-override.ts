@@ -85,6 +85,7 @@ export const tslintOverride = {
         "strict-type-predicates": false,
         "use-default-type-parameter": true,
         "no-unused-variable": false,
+        "triple-equal": false,
 
         // Maintainability
         "cyclomatic-complexity": true,
