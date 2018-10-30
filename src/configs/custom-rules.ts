@@ -23,6 +23,7 @@ export const customRules = {
             { type: 'enumMember', format: ['UPPER_CASE', 'PascalCase'] },
 
             { type: 'property', format: ['strictCamelCase', 'UPPER_CASE'] },
+            { type: 'property', modifiers: 'private', leadingUnderscore: 'allow' },
 
             { type: 'class', modifiers: 'abstract', prefix: 'Abstract' },
             { type: 'class', format: 'StrictPascalCase' },
