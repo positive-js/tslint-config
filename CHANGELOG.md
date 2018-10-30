@@ -1,3 +1,45 @@
+<a name="0.10.0"></a>
+# [0.10.0](https://github.com/positive-js/tslint-config/compare/0.9.2...0.10.0) (2018-10-30)
+
+
+### Bug Fixes
+
+* Remove deprecated rules and some unuseful restrictions (#52) ([7c0f102](https://github.com/positive-js/tslint-config/commit/7c0f102)), closes [#52](https://github.com/positive-js/tslint-config/issues/52)
+* **config:** fixed overlap rules for private properties (#53) ([11f77e6](https://github.com/positive-js/tslint-config/commit/11f77e6)), closes [#53](https://github.com/positive-js/tslint-config/issues/53)
+
+
+### Chores
+
+* updated exports ([6fdcb1b](https://github.com/positive-js/tslint-config/commit/6fdcb1b))
+
+
+### Features
+
+* strict-type-predicates & prefer-readonly ([04f8e32](https://github.com/positive-js/tslint-config/commit/04f8e32))
+* **config:** disable triple-equal ([68a74d3](https://github.com/positive-js/tslint-config/commit/68a74d3))
+
+
+
+<a name="0.9.2"></a>
+## [0.9.2](https://github.com/positive-js/tslint-config/compare/0.9.1...0.9.2) (2018-10-19)
+
+
+### Chores
+
+* fix circle ci config ([d0986b4](https://github.com/positive-js/tslint-config/commit/d0986b4))
+
+
+
+<a name="0.9.1"></a>
+## [0.9.1](https://github.com/positive-js/tslint-config/compare/0.9.0...0.9.1) (2018-10-19)
+
+
+### Chores
+
+* fix circle ci config ([4233030](https://github.com/positive-js/tslint-config/commit/4233030))
+
+
+
 <a name="0.9.0"></a>
 # [0.9.0](https://github.com/positive-js/tslint-config/compare/0.8.0...0.9.0) (2018-10-19)
 
