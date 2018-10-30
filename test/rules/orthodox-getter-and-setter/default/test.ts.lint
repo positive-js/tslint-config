@@ -98,3 +98,18 @@ class Test9 {
     }
 ~~~~~ [Getters must be declared before setters.]
 }
+
+class Test10 {
+    private _otherProperty: any;
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Private property with leading underscore must be used only for getter or setter.]
+
+    get property() {
+        return this._property;
+    }
+
+    set property(value) {
+        this._property = value;
+    }
+
+    private _property: string;
+}
