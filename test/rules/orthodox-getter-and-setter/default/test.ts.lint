@@ -113,3 +113,15 @@ class Test10 {
 
     private _property: string;
 }
+
+class Test11 {
+    get property() {
+        return this._property;
+    }
+
+    set property(value) {
+        this._property = value;
+    }
+
+    protected _property: string;
+}

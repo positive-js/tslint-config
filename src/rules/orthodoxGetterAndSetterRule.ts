@@ -49,7 +49,8 @@ class Walker extends Lint.RuleWalker {
         const propertyName = property.name.getText();
         const getterOrSetterName = propertyName.slice(1);
 
-        if (propertyName.startsWith('_') && tsutils.hasModifier(property.modifiers, ts.SyntaxKind.PrivateKeyword)) {
+        if (propertyName.startsWith('_') && tsutils.hasModifier(property.modifiers, ts.SyntaxKind.PrivateKeyword,
+            ts.SyntaxKind.ProtectedKeyword)) {
             const getter = property.parent.members.find((member) => {
                 return tsutils.isGetAccessorDeclaration(member) && member.name.getText() === getterOrSetterName;
             }) as ts.GetAccessorDeclaration | undefined;
@@ -64,7 +65,7 @@ class Walker extends Lint.RuleWalker {
             }
 
             if ((getter && property.pos < getter.pos) ||
-                    (setter && property && property.pos < setter.pos)) {
+                (setter && property && property.pos < setter.pos)) {
                 this.addFailureAtNode(property,
                     'Private property for getter or setter must be declared after them.');
             }
