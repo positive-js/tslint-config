@@ -1,3 +1,14 @@
+<a name="0.10.1"></a>
+## [0.10.1](https://github.com/positive-js/tslint-config/compare/0.10.0...0.10.1) (2018-11-28)
+
+
+### Bug Fixes
+
+* **rules:** fixed otrthodox-getter-and-setter for protected properties ([5b47c9f](https://github.com/positive-js/tslint-config/commit/5b47c9f))
+* fixed vulnerability event-stream ([188361c](https://github.com/positive-js/tslint-config/commit/188361c))
+
+
+
 <a name="0.10.0"></a>
 # [0.10.0](https://github.com/positive-js/tslint-config/compare/0.9.2...0.10.0) (2018-10-30)
 
