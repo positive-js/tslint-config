@@ -11,7 +11,7 @@ export const customRules = {
             true,
             { type: 'default', format: 'camelCase', leadingUnderscore: 'forbid', trailingUnderscore: 'forbid' },
 
-            { type: 'variable', format: ['camelCase', 'UPPER_CASE'], modifiers: ['local', 'const', 'rename'] },
+            { type: 'variable', format: ['camelCase', 'UPPER_CASE'] },
             { type: 'function', format: ['strictCamelCase'] },
 
             { type: 'type', format: 'StrictPascalCase' },
