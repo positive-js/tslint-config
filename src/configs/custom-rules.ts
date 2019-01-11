@@ -11,7 +11,7 @@ export const customRules = {
             true,
             { type: 'default', format: 'camelCase', leadingUnderscore: 'forbid', trailingUnderscore: 'forbid' },
 
-            { type: 'variable', format: ['camelCase', 'UPPER_CASE'] },
+            { type: 'variable', format: ['camelCase', 'UPPER_CASE'], modifiers: ['local', 'const', 'rename'] },
             { type: 'function', format: ['strictCamelCase'] },
 
             { type: 'type', format: 'StrictPascalCase' },
@@ -22,7 +22,7 @@ export const customRules = {
 
             { type: 'enumMember', format: ['UPPER_CASE', 'PascalCase'] },
 
-            { type: 'property', format: ['strictCamelCase', 'UPPER_CASE'] },
+            { type: 'property', format: ['camelCase', 'UPPER_CASE'] },
             { type: 'property', modifiers: 'private', leadingUnderscore: 'allow' },
 
             { type: 'class', modifiers: 'abstract', prefix: 'Abstract' },
