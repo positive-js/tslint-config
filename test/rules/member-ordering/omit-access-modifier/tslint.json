@@ -1,0 +1,9 @@
+{
+    "rules": {
+        "member-ordering-advanced": [true, { "order": [
+            "static-field",
+            "instance-field",
+            "constructor"
+        ]}]
+    }
+}

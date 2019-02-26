@@ -1,6 +1,30 @@
 export const customRules = {
     rules: {
         'orthodox-getter-and-setter': true,
+        'member-ordering-advanced': [
+            true, {
+                order: [
+                    'public-static-field',
+                    'protected-static-field',
+                    'private-static-field',
+
+                    'public-instance-field',
+                    'protected-instance-field',
+                    'private-instance-field',
+
+                    'public-constructor',
+                    'protected-constructor',
+                    'private-constructor',
+
+                    'public-static-method',
+                    'protected-static-method',
+                    'private-static-method',
+
+                    'public-instance-method',
+                    'protected-instance-method',
+                    'private-instance-method'
+                ]
+            }],
         'blank-lines': [
             true,
             {

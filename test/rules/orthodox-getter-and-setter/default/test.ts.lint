@@ -30,7 +30,7 @@ class Test2 {
 
 class Test3 {
     private _property: string;
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~ [Private property for getter or setter must be declared after them.]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~ [Property for getter or setter must be declared after them.]
 
     get property() {
         return this._property;
@@ -43,7 +43,7 @@ class Test3 {
 
 class Test4 {
     private _property: string;
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~ [Private property for getter or setter must be declared after them.]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~ [Property for getter or setter must be declared after them.]
 
     set property(value) {
         this._property = value;
@@ -52,7 +52,7 @@ class Test4 {
 
 class Test5 {
     private _property: string;
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~ [Private property for getter or setter must be declared after them.]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~ [Property for getter or setter must be declared after them.]
 
     get property() {
         return this._property;
@@ -61,7 +61,7 @@ class Test5 {
 
 class Test6 {
     private _property: string;
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~ [Private property with leading underscore must be used only for getter or setter.]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~ [Property with leading underscore must be used only for getter or setter.]
 }
 
 class Test7 {
@@ -82,7 +82,7 @@ class Test8 {
 
 class Test9 {
     private _property: string;
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~ [Private property for getter or setter must be declared after them.]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~ [Property for getter or setter must be declared after them.]
 
     set property(value) {
     ~~~~~~~~~~~~~~~~~~~~~
@@ -101,7 +101,7 @@ class Test9 {
 
 class Test10 {
     private _otherProperty: any;
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Private property with leading underscore must be used only for getter or setter.]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ [Property with leading underscore must be used only for getter or setter.]
 
     get property() {
         return this._property;

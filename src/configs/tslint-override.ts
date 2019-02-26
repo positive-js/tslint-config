@@ -6,6 +6,7 @@ export const tslintOverride = {
         // TypeScript-specific
         "member-access": [true, "no-public"],
         "promise-function-async": false,
+        'member-ordering': false,
 
         // Style
         "array-type": [

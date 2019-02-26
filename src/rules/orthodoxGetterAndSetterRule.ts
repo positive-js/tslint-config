@@ -2,6 +2,8 @@ import * as Lint from 'tslint';
 import * as tsutils from 'tsutils';
 import * as ts from 'typescript';
 
+import { getAccessorsByUnderscoredProperty, isUnderscoredProperty } from '../utils';
+
 
 /**
  * Rule that enforces order getter property > setter property > private _property .
@@ -46,29 +48,17 @@ class Walker extends Lint.RuleWalker {
     }
 
     visitPropertyDeclaration(property: ts.PropertyDeclaration) {
-        const propertyName = property.name.getText();
-        const getterOrSetterName = propertyName.slice(1);
+        const accessors = getAccessorsByUnderscoredProperty(property);
 
-        if (propertyName.startsWith('_') && tsutils.hasModifier(property.modifiers, ts.SyntaxKind.PrivateKeyword,
-            ts.SyntaxKind.ProtectedKeyword)) {
-            const getter = property.parent.members.find((member) => {
-                return tsutils.isGetAccessorDeclaration(member) && member.name.getText() === getterOrSetterName;
-            }) as ts.GetAccessorDeclaration | undefined;
+        if (isUnderscoredProperty(property) && !accessors.getter && !accessors.setter) {
+            this.addFailureAtNode(property,
+                'Property with leading underscore must be used only for getter or setter.');
+        }
 
-            const setter = property.parent.members.find((member) => {
-                return tsutils.isSetAccessorDeclaration(member) && member.name.getText() === getterOrSetterName;
-            }) as ts.SetAccessorDeclaration | undefined;
-
-            if (!getter && !setter) {
-                this.addFailureAtNode(property,
-                    'Private property with leading underscore must be used only for getter or setter.');
-            }
-
-            if ((getter && property.pos < getter.pos) ||
-                (setter && property && property.pos < setter.pos)) {
-                this.addFailureAtNode(property,
-                    'Private property for getter or setter must be declared after them.');
-            }
+        if ((accessors.getter && property.pos < accessors.getter.pos) ||
+            (accessors.setter && property && property.pos < accessors.setter.pos)) {
+            this.addFailureAtNode(property,
+                'Property for getter or setter must be declared after them.');
         }
 
         super.visitPropertyDeclaration(property);

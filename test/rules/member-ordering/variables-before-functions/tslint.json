@@ -1,0 +1,5 @@
+{
+  "rules": {
+    "member-ordering-advanced": [true, "variables-before-functions"]
+  }
+}

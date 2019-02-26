@@ -1,0 +1,102 @@
+class TestClass1 {
+    get property() {
+        return this._property;
+    }
+
+    set property(value) {
+        this._property = value;
+    }
+
+    private _property: string = 'property';
+
+    method() {
+        return 'test';
+    }
+}
+
+class TestClass2 {
+    get property() {
+        return this._property;
+    }
+
+    set property(value) {
+        this._property = value;
+    }
+
+    private _property: string = 'property';
+
+    private privateProperty: string = 'private property';
+
+    method() {
+    ~~~~~~~~~~
+        return this.privateProperty;
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    }
+~~~~~ [Declaration of public instance method not allowed after declaration of private instance field. Instead, this should come at the beginning of the class/interface.]
+}
+
+class TestClass3 {
+    get property() {
+        return this._property;
+    }
+
+    set property(value) {
+        this._property = value;
+    }
+
+    private _property: string = 'property';
+
+    method() {
+        return this.privateProperty;
+    }
+
+    private privateProperty: string = 'private property';
+}
+
+class TestClass4 {
+    get property() {
+        return this._property;
+    }
+
+    set property(value) {
+        this._property = value;
+    }
+
+    protected _property: string = 'protected property';
+
+    method() {
+        return 'test';
+    }
+}
+
+class TestClass5 extends TestClass4 {
+    get property() {
+        return this._property;
+    }
+
+    set property(value) {
+        this._property = value;
+    }
+
+    protected _property: string = 'property';
+
+    method() {
+        return 'test';
+    }
+}
+
+class TestClass5 extends TestClass4 {
+    get property() {
+        return this._property;
+    }
+
+    set property(value) {
+        this._property = value;
+    }
+
+    protected _property: string = 'property';
+
+    method() {
+        return 'test';
+    }
+}

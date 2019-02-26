@@ -1,0 +1,8 @@
+{
+    "rules": {
+        "member-ordering-advanced": [true, {
+            "order": "fields-first",
+            "alphabetize": true
+        }]
+    }
+}

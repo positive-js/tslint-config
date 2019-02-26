@@ -1,0 +1,5 @@
+{
+  "rules": {
+    "member-ordering-advanced": [true, "public-before-private"]
+  }
+}

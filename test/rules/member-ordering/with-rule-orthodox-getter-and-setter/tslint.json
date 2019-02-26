@@ -1,0 +1,15 @@
+{
+    "rules": {
+        "orthodox-getter-and-setter": true,
+        "member-ordering-advanced": [true, {
+            "order": [
+                "public-instance-field",
+                "public-instance-method",
+                "protected-instance-field",
+                "protected-instance-method",
+                "private-instance-field",
+                "private-instance-method"
+            ]
+        }]
+    }
+}
