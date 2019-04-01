@@ -1,3 +1,30 @@
+<a name="0.11.0"></a>
+# [0.11.0](https://github.com/positive-js/tslint-config/compare/0.10.1...0.11.0) (2019-04-01)
+
+
+### Bug Fixes
+
+* **config:** naming-convention for property allows non-strict camel case ([66c53b9](https://github.com/positive-js/tslint-config/commit/66c53b9))
+* **config:** removed modifiers for variable of naming-convention ([f407a56](https://github.com/positive-js/tslint-config/commit/f407a56))
+* synchronous work orthodox-getter-and-setter and member-ordering ([d5eb846](https://github.com/positive-js/tslint-config/commit/d5eb846))
+
+
+### Chores
+
+* update vendor commitlint ([6b002b1](https://github.com/positive-js/tslint-config/commit/6b002b1))
+
+
+### Documentation
+
+* fixed changelog ([60124b9](https://github.com/positive-js/tslint-config/commit/60124b9))
+
+
+### Features
+
+* add helpers for errors ([af75941](https://github.com/positive-js/tslint-config/commit/af75941))
+
+
+
 <a name="0.10.1"></a>
 ## [0.10.1](https://github.com/positive-js/tslint-config/compare/0.10.0...0.10.1) (2018-11-28)
 
