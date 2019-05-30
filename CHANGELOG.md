@@ -1,3 +1,13 @@
+<a name="0.12.0"></a>
+# [0.12.0](https://github.com/positive-js/tslint-config/compare/0.11.0...0.12.0) (2019-05-30)
+
+
+### Features
+
+* update tslint vendor (#58) ([8bb0485](https://github.com/positive-js/tslint-config/commit/8bb0485)), closes [#58](https://github.com/positive-js/tslint-config/issues/58)
+
+
+
 <a name="0.11.0"></a>
 # [0.11.0](https://github.com/positive-js/tslint-config/compare/0.10.1...0.11.0) (2019-04-01)
 
