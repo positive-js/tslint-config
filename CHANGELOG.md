@@ -1,3 +1,18 @@
+<a name="0.13.0"></a>
+# [0.13.0](https://github.com/positive-js/tslint-config/compare/0.12.0...0.13.0) (2019-09-30)
+
+
+### Bug Fixes
+
+* updated dependency ([ef599b6](https://github.com/positive-js/tslint-config/commit/ef599b6))
+
+
+### Chores
+
+* updated dependencies ([3ed929c](https://github.com/positive-js/tslint-config/commit/3ed929c))
+
+
+
 <a name="0.12.0"></a>
 # [0.12.0](https://github.com/positive-js/tslint-config/compare/0.11.0...0.12.0) (2019-05-30)
 
