@@ -1,3 +1,13 @@
+<a name="0.13.1"></a>
+## [0.13.1](https://github.com/positive-js/tslint-config/compare/0.13.0...0.13.1) (2019-09-30)
+
+
+### Bug Fixes
+
+* change  tslint dependency type to dev ([0dbfad1](https://github.com/positive-js/tslint-config/commit/0dbfad1))
+
+
+
 <a name="0.13.0"></a>
 # [0.13.0](https://github.com/positive-js/tslint-config/compare/0.12.0...0.13.0) (2019-09-30)
 
