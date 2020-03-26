@@ -65,7 +65,7 @@ export const tslintOverride = {
         "no-console": [true, "log", "debug", "error"],
         "no-duplicate-switch-case": true,
         "no-for-in-array": true,
-        "no-implicit-dependencies": [true, "dev"],
+        "no-implicit-dependencies": false,
         "no-this-assignment": [
             true,
             {
