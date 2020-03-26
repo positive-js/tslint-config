@@ -1,3 +1,14 @@
+<a name="0.13.2"></a>
+## [0.13.2](https://github.com/positive-js/tslint-config/compare/0.13.1...0.13.2) (2020-03-26)
+
+
+### Features
+
+* disabled no-implicit-dependencies (#59) ([6537317](https://github.com/positive-js/tslint-config/commit/6537317)), closes [#59](https://github.com/positive-js/tslint-config/issues/59)
+* updated dependencies ([83733c4](https://github.com/positive-js/tslint-config/commit/83733c4))
+
+
+
 <a name="0.13.1"></a>
 ## [0.13.1](https://github.com/positive-js/tslint-config/compare/0.13.0...0.13.1) (2019-09-30)
 
@@ -39,9 +50,9 @@
 
 ### Bug Fixes
 
+* synchronous work orthodox-getter-and-setter and member-ordering ([d5eb846](https://github.com/positive-js/tslint-config/commit/d5eb846))
 * **config:** naming-convention for property allows non-strict camel case ([66c53b9](https://github.com/positive-js/tslint-config/commit/66c53b9))
 * **config:** removed modifiers for variable of naming-convention ([f407a56](https://github.com/positive-js/tslint-config/commit/f407a56))
-* synchronous work orthodox-getter-and-setter and member-ordering ([d5eb846](https://github.com/positive-js/tslint-config/commit/d5eb846))
 
 
 ### Chores
@@ -66,8 +77,8 @@
 
 ### Bug Fixes
 
-* **rules:** fixed otrthodox-getter-and-setter for protected properties ([5b47c9f](https://github.com/positive-js/tslint-config/commit/5b47c9f))
 * fixed vulnerability event-stream ([188361c](https://github.com/positive-js/tslint-config/commit/188361c))
+* **rules:** fixed otrthodox-getter-and-setter for protected properties ([5b47c9f](https://github.com/positive-js/tslint-config/commit/5b47c9f))
 
 
 
@@ -77,8 +88,8 @@
 
 ### Bug Fixes
 
-* Remove deprecated rules and some unuseful restrictions (#52) ([7c0f102](https://github.com/positive-js/tslint-config/commit/7c0f102)), closes [#52](https://github.com/positive-js/tslint-config/issues/52)
 * **config:** fixed overlap rules for private properties (#53) ([11f77e6](https://github.com/positive-js/tslint-config/commit/11f77e6)), closes [#53](https://github.com/positive-js/tslint-config/issues/53)
+* Remove deprecated rules and some unuseful restrictions (#52) ([7c0f102](https://github.com/positive-js/tslint-config/commit/7c0f102)), closes [#52](https://github.com/positive-js/tslint-config/issues/52)
 
 
 ### Chores
@@ -88,8 +99,8 @@
 
 ### Features
 
-* strict-type-predicates & prefer-readonly ([04f8e32](https://github.com/positive-js/tslint-config/commit/04f8e32))
 * **config:** disable triple-equal ([68a74d3](https://github.com/positive-js/tslint-config/commit/68a74d3))
+* strict-type-predicates & prefer-readonly ([04f8e32](https://github.com/positive-js/tslint-config/commit/04f8e32))
 
 
 
@@ -119,9 +130,9 @@
 
 ### Bug Fixes
 
-* **rules:** remove 'rxjs' from "import-blacklist" (#45) ([96564e9](https://github.com/positive-js/tslint-config/commit/96564e9)), closes [#45](https://github.com/positive-js/tslint-config/issues/45)
 * changed notification channel ([f9d24e5](https://github.com/positive-js/tslint-config/commit/f9d24e5))
 * husky hooks ([cb1b223](https://github.com/positive-js/tslint-config/commit/cb1b223))
+* **rules:** remove 'rxjs' from "import-blacklist" (#45) ([96564e9](https://github.com/positive-js/tslint-config/commit/96564e9)), closes [#45](https://github.com/positive-js/tslint-config/issues/45)
 
 
 ### Chores
@@ -137,10 +148,10 @@
 
 ### Features
 
-* added rxjs rules (#47) ([438fbaf](https://github.com/positive-js/tslint-config/commit/438fbaf)), closes [#47](https://github.com/positive-js/tslint-config/issues/47)
-* updated dependencies (#46) ([79ce546](https://github.com/positive-js/tslint-config/commit/79ce546)), closes [#46](https://github.com/positive-js/tslint-config/issues/46)
 * **rules:** added rule naming-convention (#48) ([f890ea6](https://github.com/positive-js/tslint-config/commit/f890ea6)), closes [#48](https://github.com/positive-js/tslint-config/issues/48)
 * **rules:** added rule orthodox-getter-and-setter (#49) ([a92875f](https://github.com/positive-js/tslint-config/commit/a92875f)), closes [#49](https://github.com/positive-js/tslint-config/issues/49)
+* added rxjs rules (#47) ([438fbaf](https://github.com/positive-js/tslint-config/commit/438fbaf)), closes [#47](https://github.com/positive-js/tslint-config/issues/47)
+* updated dependencies (#46) ([79ce546](https://github.com/positive-js/tslint-config/commit/79ce546)), closes [#46](https://github.com/positive-js/tslint-config/issues/46)
 
 
 
@@ -195,8 +206,8 @@
 
 ### Features
 
-* removed codelizer rules (#38) ([4f21a31](https://github.com/positive-js/tslint-config/commit/4f21a31)), closes [#38](https://github.com/positive-js/tslint-config/issues/38)
 * **config:** updated npm dependencies ([ac23e3e](https://github.com/positive-js/tslint-config/commit/ac23e3e))
+* removed codelizer rules (#38) ([4f21a31](https://github.com/positive-js/tslint-config/commit/4f21a31)), closes [#38](https://github.com/positive-js/tslint-config/issues/38)
 
 
 
@@ -367,10 +378,10 @@
 
 ### Chores
 
+* **tslint-config:** bumped version number to 0.1.3 ([7f45f50](https://github.com/positive-js/tslint-config/commit/7f45f50))
 * added "quotemark" rule ([caf948f](https://github.com/positive-js/tslint-config/commit/caf948f))
 * added override for TSLint rules ([e4961de](https://github.com/positive-js/tslint-config/commit/e4961de))
 * added override rules for TSLint Microsoft ([c90ad00](https://github.com/positive-js/tslint-config/commit/c90ad00))
-* **tslint-config:** bumped version number to 0.1.3 ([7f45f50](https://github.com/positive-js/tslint-config/commit/7f45f50))
 
 
 
