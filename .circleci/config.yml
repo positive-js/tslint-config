@@ -1,7 +1,7 @@
 anchor_job_defaults: &job_defaults
   working_directory: ~/tslint-config
   docker:
-    - image: ptsecurity/node-container:0.0.4
+    - image: ptsecurity/node-container:0.1.0
 
 anchor_post_checkout: &post_checkout
   post: git pull --ff-only origin "refs/pull/${CI_PULL_REQUEST//*pull\//}/merge"
