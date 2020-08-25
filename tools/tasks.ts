@@ -23,7 +23,7 @@ export async function compileTS() {
 export async function copyMetaFiles() {
     const files = [
         {from: `${root}/package.json`,      to: `${packageDist}/package.json`},
-        {from: `${root}/package-lock.json`, to: `${packageDist}/package-lock.json`},
+        {from: `${root}/yarn.lock`,         to: `${packageDist}/yarn.lock`},
         {from: `${root}/CHANGELOG.md`,      to: `${packageDist}/CHANGELOG.md`},
         {from: `${root}/README.md`,         to: `${packageDist}/README.md`}
     ];
