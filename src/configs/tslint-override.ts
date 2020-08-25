@@ -40,6 +40,7 @@ export const tslintOverride = {
         "return-undefined": false,
         "class-name": false,
         "interface-name": false,
+        "newline-per-chained-call": false,
 
         // Functionality
         "await-promise": [
