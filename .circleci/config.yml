@@ -1,65 +1,72 @@
 anchor_job_defaults: &job_defaults
-  working_directory: ~/tslint-config
-  docker:
-    - image: ptsecurity/node-container:0.1.0
+    working_directory: ~/tslint-config
+    docker:
+        -   image: circleci/node:12.19.0
+            auth:
+                username: $DOCKER_HUB_USERNAME
+                password: $DOCKER_HUB_PASSWORD
 
 anchor_post_checkout: &post_checkout
-  post: git pull --ff-only origin "refs/pull/${CI_PULL_REQUEST//*pull\//}/merge"
+    post: git pull --ff-only origin "refs/pull/${CI_PULL_REQUEST//*pull\//}/merge"
 
 version: 2
 jobs:
-  build:
-    <<: *job_defaults
-    steps:
-      - checkout:
-          <<: *post_checkout
-      - restore_cache:
-          key: tslint-cache-{{ checksum "package.json" }}
-      - run:
-          name: System information
-          command: |
-            echo "Node.js $(node -v)"
-            echo "npm $(npm -v)"
-            echo "Yarn v$(yarn --version)"
-      - run:
-          name: Install npm packages
-          command: npm install
-      - save_cache:
-          key: tslint-cache-{{ checksum "package.json" }}
-          paths:
-            - "node_modules"
-      - run:
-          name: Run build
-          command: npm run build:tslint
-      - run:
-          name: Test
-          command: npm run test:rules
-      - persist_to_workspace:
-          root: .
-          paths: .
+    build:
+        <<: *job_defaults
+        steps:
+            -   checkout:
+                    <<: *post_checkout
+            -   restore_cache:
+                    key: tslint-cache-{{ checksum "package.json" }}
+            -   run:
+                    name: System information
+                    command: |
+                        echo "Node.js $(node -v)"
+                        echo "npm $(npm -v)"
+                        echo "Yarn v$(yarn --version)"
+            -   run:
+                    name: Install npm packages
+                    command: npm install
+            -   save_cache:
+                    key: tslint-cache-{{ checksum "package.json" }}
+                    paths:
+                        - "node_modules"
+            -   run:
+                    name: Run build
+                    command: npm run build:tslint
+            -   run:
+                    name: Test
+                    command: npm run test:rules
+            -   persist_to_workspace:
+                    root: .
+                    paths: .
 
-  publish:
-    <<: *job_defaults
-    steps:
-      - attach_workspace:
-          at: ./
-      - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-      - run: npm publish ./dist/@ptsecurity/tslint-config --access public
-      - run: ./scripts/trigger_notify.sh
+    publish:
+        <<: *job_defaults
+        steps:
+            -   attach_workspace:
+                    at: ./
+            -   run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+            -   run: npm publish ./dist/@ptsecurity/tslint-config --access public
+            -   run: ./scripts/trigger_notify.sh
 
 workflows:
-  version: 2
-  default_workflow:
-    jobs:
-      - build:
-          filters:
-            tags:
-              only: /.*/
-      - publish:
-          requires:
-            - build
-          filters:
-            branches:
-              ignore: /.*/
-            tags:
-              only: /^\d+\.\d+\.\d+$/
+    version: 2
+    default_workflow:
+        jobs:
+            -   build:
+                    context:
+                        - docker-hub
+                    filters:
+                        tags:
+                            only: /.*/
+            -   publish:
+                    context:
+                        - docker-hub
+                    requires:
+                        - build
+                    filters:
+                        branches:
+                            ignore: /.*/
+                        tags:
+                            only: /^\d+\.\d+\.\d+$/
